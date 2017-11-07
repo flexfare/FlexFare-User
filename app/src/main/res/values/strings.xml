@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">FlexFare</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Drivers</string>
+    <string name="title_notifications">Point Me</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="car_type">CAR TYPE</string>
+    <string name="route">ROUTE</string>
+    <string name="category">CATEGORY</string>
+    <string name="carType">Toyota Camry - 2013</string>
+    <string name="routes">Interstate</string>
+    <string name="cates">Taxi</string>
+    <string name="description">Description</string>
+    <string name="plate">Plate Number</string>
+    <string name="license">FJK 221 DF</string>
+    <string name="bio">BIO</string>
+    <string name="text">You can complain to this post if it contains violence,
+        bullying and threats, hate speech, tragic events and sexually explicit contents.
+        Nobody will see the post if you complain to it. You can\'t delete your complain.</string>
+    <string name="driver_name">Uduak Ukpong</string>
+    <string name="driver_detail">Driver Information</string>
+
+    <string name="OKAY">OKAY</string>
+    <string name="lga">LGA</string>
+    <string name="filter">Filter</string>
+    <string name="state">State</string>
+</resources>
