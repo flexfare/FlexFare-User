@@ -9,6 +9,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.flexfare.android.user.R;
+import com.squareup.picasso.MemoryPolicy;
+import com.squareup.picasso.NetworkPolicy;
+import com.squareup.picasso.Picasso;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -31,6 +34,10 @@ public class DetailActivity extends AppCompatActivity {
     TextView category;
     @BindView(R.id.routes)
     TextView routes;
+    @BindView(R.id.description)
+    TextView descrption;
+    /*@BindView(R.id.)
+    TextView descrption;*/
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -45,13 +52,22 @@ public class DetailActivity extends AppCompatActivity {
         final String car_type = intent.getExtras().getString("car_type");
         final String route = intent.getExtras().getString("routes");
         final String categories = intent.getExtras().getString("categories");
-        final int img = intent.getExtras().getInt("image");
+        final String img = intent.getExtras().getString("image");
+        final String bio = intent.getExtras().getString("bio");
+        final String car_img = intent.getExtras().getString("car_image");
+        final String mobile = intent.getExtras().getString("mobile");
 
-        avi.setImageResource(img);
+        if(img.length() == 0){
+            avi.setImageResource(R.drawable.avatar);
+        }else {
+            Picasso.with(this).load("http://www.flexfare.org/api/images/" + img).memoryPolicy(MemoryPolicy.NO_CACHE).networkPolicy(NetworkPolicy.NO_CACHE).into(avi);
+        }
+
         carType.setText(car_type);
         category.setText(categories);
         routes.setText(route);
         driverName.setText(driver);
+        descrption.setText(bio);
     }
     @Override
     public boolean onNavigateUp() {
